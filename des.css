@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: rgba(37, 23, 1, 0.8); /* Transparent dark brown */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Registration Form Styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 650px;
+    margin-top: 40px; /* Space between header and form */
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.registration-form .form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration-form .form-column {
+    width: 48%;
+    padding-right: 10px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"],
+.registration-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Checkbox Group Styling */
+.registration-form .checkbox-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack checkboxes vertically */
+}
+
+.registration-form .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.registration-form .checkbox-wrapper input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.registration-form .checkbox-wrapper label {
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+.registration-form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(37, 23, 1, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: rgba(37, 23, 1, 0.8);
+}
+
+/* Login Form Styling */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin-top: 60px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.login-form .form-group {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    margin-bottom: 20px; /* Space between form elements */
+}
+
+.login-form label {
+    display: block; /* Ensure the label takes the full width */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(37, 23, 1, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login-form p {
+    text-align: center;
+    margin-top: 15px; /* Space above the link */
+}
+
+.login-form p a {
+    color: rgba(37, 23, 1, 0.8);
+    text-decoration: none;
+}
+
+.login-form p a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC Registration Form</title>
+    <link rel="stylesheet" href="des.css">
+    <style>
+        /* Add some space between upload and membership */
+        .form-column .upload-space {
+            margin-bottom: 20px; /* Adjust the value for more or less space */
+        }
+        /* Style for the login link */
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">JC</div>
+    </header>
+
+    <div class="container">
+        <form class="registration-form">
+            <h2>Registration Form</h2>
+            
+            <div class="form-group">
+                <div class="form-column">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="Your first name.." required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Your last name.." required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number.." required>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password.." required>
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password.." required>
+                </div>
+
+                <div class="form-column">
+                    <label for="province">Province</label>
+                    <select id="province" name="province" required>
+                        <option value="" disabled selected>Select your province</option>
+                        <option value="albay">Albay</option>
+                        <option value="camarines_sur">Camarines Sur</option>
+                        <option value="cebu">Cebu</option>
+                        <option value="davao_del_sur">Davao del Sur</option>
+                        <option value="laguna">Laguna</option>
+                    </select>
+
+                    <label for="city">City</label>
+                    <select id="city" name="city" required>
+                        <option value="" disabled selected>Select your city</option>
+                        <!-- Cities for Albay -->
+                        <option class="albay" value="legazpi">Legazpi City</option>
+                        <option class="albay" value="tabaco">Tabaco City</option>
+                        <option class="albay" value="ligao">Ligao City</option>
+                        <option class="albay" value="daraga">Daraga</option>
+                        <option class="albay" value="guinobatan">Guinobatan</option>
+                
+                        <!-- Cities for Camarines Sur -->
+                        <option class="camarines_sur" value="naga">Naga City</option>
+                        <option class="camarines_sur" value="sipocot">Sipocot</option>
+                        <option class="camarines_sur" value="baao">Baao</option>
+                        <option class="camarines_sur" value="delgado">Delgado</option>
+                        <option class="camarines_sur" value="caramoan">Caramoan</option>
+                
+                        <!-- Cities for Cebu -->
+                        <option class="cebu" value="cebu_city">Cebu City</option>
+                        <option class="cebu" value="mandaue">Mandaue</option>
+                        <option class="cebu" value="lapu_lapu">Lapu-Lapu</option>
+                        <option class="cebu" value="toledo">Toledo</option>
+                        <option class="cebu" value="carcar">Carcar City</option>
+                
+                        <!-- Cities for Davao del Sur -->
+                        <option class="davao_del_sur" value="davao_city">Davao City</option>
+                        <option class="davao_del_sur" value="tagum">Tagum</option>
+                        <option class="davao_del_sur" value="digos">Digos</option>
+                        <option class="davao_del_sur" value="mati">Mati</option>
+                        <option class="davao_del_sur" value="hagonoy">Hagonoy</option>
+                
+                        <!-- Cities for Laguna -->
+                        <option class="laguna" value="los_banos">Los Baños</option>
+                        <option class="laguna" value="calamba">Calamba</option>
+                        <option class="laguna" value="biñan">Biñan</option>
+                        <option class="laguna" value="san_pedro">San Pedro</option>
+                        <option class="laguna" value="sta_rosa">Sta. Rosa</option>
+                    </select>
+                
+
+                    <label for="barangay">Barangay</label>
+                    <select id="barangay" name="barangay" required>
+                        <option value="" disabled selected>Select your barangay</option>
+                        
+                        <!-- Barangays for Legazpi City -->
+                        <option class="legazpi" value="barangay_legazpi_1">Barangay Arimbay (Legazpi City)</option>
+                        <option class="legazpi" value="barangay_legazpi_2">Barangay Bagacay (Legazpi City)</option>
+                        <option class="legazpi" value="barangay_legazpi_3">Barangay Bagong Abre (Legazpi City)</option>
+                        <option class="legazpi" value="barangay_legazpi_4">Barangay Em's Barrio (Legazpi City)</option>
+                        <option class="legazpi" value="barangay_legazpi_5">Barangay Em's Barrio (South) (Legazpi City)</option>
+                
+                        <!-- Barangays for Tabaco City -->
+                        <option class="tabaco" value="barangay_tabaco_1">Barangay San Juan (Tabaco City)</option>
+                        <option class="tabaco" value="barangay_tabaco_2">Barangay Pawa (Tabaco City)</option>
+                        <option class="tabaco" value="barangay_tabaco_3">Barangay Concepcion (Tabaco City)</option>
+                        <option class="tabaco" value="barangay_tabaco_4">Barangay Taysan (Tabaco City)</option>
+                        <option class="tabaco" value="barangay_tabaco_5">Barangay San Isidro (Tabaco City)</option>
+                
+                        <!-- Barangays for Ligao City -->
+                        <option class="ligao" value="barangay_ligao_1">Barangay Longos (Ligao City)</option>
+                        <option class="ligao" value="barangay_ligao_2">Barangay Bay (Ligao City)</option>
+                        <option class="ligao" value="barangay_ligao_3">Barangay San Vicente (Ligao City)</option>
+                        <option class="ligao" value="barangay_ligao_4">Barangay Quinale (Ligao City)</option>
+                        <option class="ligao" value="barangay_ligao_5">Barangay Mahabang Parang (Ligao City)</option>
+                
+                        <!-- Barangays for Daraga -->
+                        <option class="daraga" value="barangay_daraga_1">Barangay Cabangan (Daraga)</option>
+                        <option class="daraga" value="barangay_daraga_2">Barangay Puro (Daraga)</option>
+                        <option class="daraga" value="barangay_daraga_3">Barangay San Isidro (Daraga)</option>
+                        <option class="daraga" value="barangay_daraga_4">Barangay Maonon (Daraga)</option>
+                        <option class="daraga" value="barangay_daraga_5">Barangay Maninila (Daraga)</option>
+                
+                        <!-- Barangays for Guinobatan -->
+                        <option class="guinobatan" value="barangay_guinobatan_1">Barangay Balocawe (Guinobatan)</option>
+                        <option class="guinobatan" value="barangay_guinobatan_2">Barangay Batbat (Guinobatan)</option>
+                        <option class="guinobatan" value="barangay_guinobatan_3">Barangay Binitayan (Guinobatan)</option>
+                        <option class="guinobatan" value="barangay_guinobatan_4">Barangay Bulan (Guinobatan)</option>
+                        <option class="guinobatan" value="barangay_guinobatan_5">Barangay Dapdap (Guinobatan)</option>
+                
+                        <!-- Barangays for Naga City -->
+                        <option class="naga" value="barangay_naga_1">Barangay Peñafrancia (Naga City)</option>
+                        <option class="naga" value="barangay_naga_2">Barangay Concepcion Pequeña (Naga City)</option>
+                        <option class="naga" value="barangay_naga_3">Barangay Bagumbayan Sur (Naga City)</option>
+                        <option class="naga" value="barangay_naga_4">Barangay San Felipe (Naga City)</option>
+                        <option class="naga" value="barangay_naga_5">Barangay Calauag (Naga City)</option>
+                
+                        <!-- Barangays for Sipocot -->
+                        <option class="sipocot" value="barangay_sipocot_1">Barangay San Roque (Sipocot)</option>
+                        <option class="sipocot" value="barangay_sipocot_2">Barangay Concepcion (Sipocot)</option>
+                        <option class="sipocot" value="barangay_sipocot_3">Barangay Camarines (Sipocot)</option>
+                        <option class="sipocot" value="barangay_sipocot_4">Barangay Taboc (Sipocot)</option>
+                        <option class="sipocot" value="barangay_sipocot_5">Barangay Malabog (Sipocot)</option>
+                
+                        <!-- Barangays for Baao -->
+                        <option class="baao" value="barangay_baao_1">Barangay Bagumbayan (Baao)</option>
+                        <option class="baao" value="barangay_baao_2">Barangay Balogo (Baao)</option>
+                        <option class="baao" value="barangay_baao_3">Barangay Caramoan (Baao)</option>
+                        <option class="baao" value="barangay_baao_4">Barangay Cabilogan (Baao)</option>
+                        <option class="baao" value="barangay_baao_5">Barangay Duloc (Baao)</option>
+
+                        <!-- Barangays for Delgado -->
+                        <option class="delgado" value="barangay_delgado_1">Barangay Bagumbayan (Delgado)</option>
+                        <option class="delgado" value="barangay_delgado_2">Barangay Cabusao (Delgado)</option>
+                        <option class="delgado" value="barangay_delgado_3">Barangay Concepcion (Delgado)</option>
+                        <option class="delgado" value="barangay_delgado_4">Barangay Del Rosario (Delgado)</option>
+                        <option class="delgado" value="barangay_delgado_5">Barangay Poblacion (Delgado)</option>
+
+                        <!-- Barangays for Caramoan -->
+                        <option class="caramoan" value="barangay_caramoan_1">Barangay Baras (Caramoan)</option>
+                        <option class="caramoan" value="barangay_caramoan_2">Barangay Calabago (Caramoan)</option>
+                        <option class="caramoan" value="barangay_caramoan_3">Barangay Caramuan (Caramoan)</option>
+                        <option class="caramoan" value="barangay_caramoan_4">Barangay Talisay (Caramoan)</option>
+                        <option class="caramoan" value="barangay_caramoan_5">Barangay Vinzons (Caramoan)</option>
+
+                        <!-- Barangays for Cebu City -->
+                        <option class="cebu_city" value="barangay_cebu_1">Barangay Apas (Cebu City)</option>
+                        <option class="cebu_city" value="barangay_cebu_2">Barangay Guadalupe (Cebu City)</option>
+                        <option class="cebu_city" value="barangay_cebu_3">Barangay Labangon (Cebu City)</option>
+                        <option class="cebu_city" value="barangay_cebu_4">Barangay Lahug (Cebu City)</option>
+                        <option class="cebu_city" value="barangay_cebu_5">Barangay Poblacion (Cebu City)</option>
+
+                        <!-- Barangays for Mandaue -->
+                        <option class="mandaue" value="barangay_mandaue_1">Barangay Bakilid (Mandaue)</option>
+                        <option class="mandaue" value="barangay_mandaue_2">Barangay Banilad (Mandaue)</option>
+                        <option class="mandaue" value="barangay_mandaue_3">Barangay Centro (Mandaue)</option>
+                        <option class="mandaue" value="barangay_mandaue_4">Barangay Ibo (Mandaue)</option>
+                        <option class="mandaue" value="barangay_mandaue_5">Barangay Tipolo (Mandaue)</option>
+
+                        <!-- Barangays for Lapu-Lapu -->
+                        <option class="lapu_lapu" value="barangay_lapu_lapu_1">Barangay Agus (Lapu-Lapu)</option>
+                        <option class="lapu_lapu" value="barangay_lapu_lapu_2">Barangay Bankal (Lapu-Lapu)</option>
+                        <option class="lapu_lapu" value="barangay_lapu_lapu_3">Barangay Buaya (Lapu-Lapu)</option>
+                        <option class="lapu_lapu" value="barangay_lapu_lapu_4">Barangay Marigondon (Lapu-Lapu)</option>
+                        <option class="lapu_lapu" value="barangay_lapu_lapu_5">Barangay Pajo (Lapu-Lapu)</option>
+
+                        <!-- Barangays for Toledo -->
+                        <option class="toledo" value="barangay_toledo_1">Barangay Bato (Toledo)</option>
+                        <option class="toledo" value="barangay_toledo_2">Barangay Don Andres (Toledo)</option>
+                        <option class="toledo" value="barangay_toledo_3">Barangay Lawis (Toledo)</option>
+                        <option class="toledo" value="barangay_toledo_4">Barangay Pinamungahan (Toledo)</option>
+                        <option class="toledo" value="barangay_toledo_5">Barangay Poblacion (Toledo)</option>
+
+                        <!-- Barangays for Carcar City -->
+                        <option class="carcar" value="barangay_carcar_1">Barangay Binabag (Carcar)</option>
+                        <option class="carcar" value="barangay_carcar_2">Barangay Calderon (Carcar)</option>
+                        <option class="carcar" value="barangay_carcar_3">Barangay Liburon (Carcar)</option>
+                        <option class="carcar" value="barangay_carcar_4">Barangay Poblacion (Carcar)</option>
+                        <option class="carcar" value="barangay_carcar_5">Barangay Valladolid (Carcar)</option>
+
+                        <!-- Barangays for Davao City -->
+                        <option class="davao_city" value="barangay_davao_1">Barangay Agdao (Davao City)</option>
+                        <option class="davao_city" value="barangay_davao_2">Barangay Buhangin (Davao City)</option>
+                        <option class="davao_city" value="barangay_davao_3">Barangay Talomo (Davao City)</option>
+                        <option class="davao_city" value="barangay_davao_4">Barangay Poblacion (Davao City)</option>
+                        <option class="davao_city" value="barangay_davao_5">Barangay Panacan (Davao City)</option>
+
+                        <!-- Barangays for Tagum -->
+                        <option class="tagum" value="barangay_tagum_1">Barangay Apokon (Tagum)</option>
+                        <option class="tagum" value="barangay_tagum_2">Barangay Magugpo (Tagum)</option>
+                        <option class="tagum" value="barangay_tagum_3">Barangay Visayan (Tagum)</option>
+                        <option class="tagum" value="barangay_tagum_4">Barangay Mankilam (Tagum)</option>
+                        <option class="tagum" value="barangay_tagum_5">Barangay San Miguel (Tagum)</option>
+
+                        <!-- Barangays for Digos -->
+                        <option class="digos" value="barangay_digos_1">Barangay Poblacion (Digos)</option>
+                        <option class="digos" value="barangay_digos_2">Barangay Sinawilan (Digos)</option>
+                        <option class="digos" value="barangay_digos_3">Barangay San Isidro (Digos)</option>
+                        <option class="digos" value="barangay_digos_4">Barangay Balnate (Digos)</option>
+                        <option class="digos" value="barangay_digos_5">Barangay Kapatagan (Digos)</option>
+
+                        <!-- Barangays for Mati -->
+                        <option class="mati" value="barangay_mati_1">Barangay Dawan (Mati)</option>
+                        <option class="mati" value="barangay_mati_2">Barangay Central (Mati)</option>
+                        <option class="mati" value="barangay_mati_3">Barangay Tagabebe (Mati)</option>
+                        <option class="mati" value="barangay_mati_4">Barangay Magdum (Mati)</option>
+                        <option class="mati" value="barangay_mati_5">Barangay Dahican (Mati)</option>
+
+                        <!-- Barangays for Hagonoy -->
+                        <option class="hagonoy" value="barangay_hagonoy_1">Barangay Poblacion (Hagonoy)</option>
+                        <option class="hagonoy" value="barangay_hagonoy_2">Barangay Cabatuan (Hagonoy)</option>
+                        <option class="hagonoy" value="barangay_hagonoy_3">Barangay San Isidro (Hagonoy)</option>
+                        <option class="hagonoy" value="barangay_hagonoy_4">Barangay San Juan (Hagonoy)</option>
+                        <option class="hagonoy" value="barangay_hagonoy_5">Barangay San Roque (Hagonoy)</option>
+
+                        <!-- Barangays for Los Baños -->
+                        <option class="los_banos" value="barangay_los_banos_1">Barangay Anos (Los Baños)</option>
+                        <option class="los_banos" value="barangay_los_banos_2">Barangay Bambang (Los Baños)</option>
+                        <option class="los_banos" value="barangay_los_banos_3">Barangay Batong Malake (Los Baños)</option>
+                        <option class="los_banos" value="barangay_los_banos_4">Barangay Bayog (Los Baños)</option>
+                        <option class="los_banos" value="barangay_los_banos_5">Barangay Longos (Los Baños)</option>
+
+                        <!-- Barangays for Calamba -->
+                        <option class="calamba" value="barangay_calamba_1">Barangay Banlic (Calamba)</option>
+                        <option class="calamba" value="barangay_calamba_2">Barangay Bubuy (Calamba)</option>
+                        <option class="calamba" value="barangay_calamba_3">Barangay Mapagong (Calamba)</option>
+                        <option class="calamba" value="barangay_calamba_4">Barangay Mayapa (Calamba)</option>
+                        <option class="calamba" value="barangay_calamba_5">Barangay Poblacion (Calamba)</option>
+
+                        <!-- Barangays for Biñan -->
+                        <option class="binan" value="barangay_binan_1">Barangay Biñan (Biñan)</option>
+                        <option class="binan" value="barangay_binan_2">Barangay Longos (Biñan)</option>
+                        <option class="binan" value="barangay_binan_3">Barangay Poblacion (Biñan)</option>
+                        <option class="binan" value="barangay_binan_4">Barangay San Antonio (Biñan)</option>
+                        <option class="binan" value="barangay_binan_5">Barangay San Isidro (Biñan)</option>
+
+                        <!-- Barangays for San Pedro -->
+                        <option class="san_pedro" value="barangay_san_pedro_1">Barangay Alabang (San Pedro)</option>
+                        <option class="san_pedro" value="barangay_san_pedro_2">Barangay Biga (San Pedro)</option>
+                        <option class="san_pedro" value="barangay_san_pedro_3">Barangay Landayan (San Pedro)</option>
+                        <option class="san_pedro" value="barangay_san_pedro_4">Barangay Magsaysay (San Pedro)</option>
+                        <option class="san_pedro" value="barangay_san_pedro_5">Barangay Poblacion (San Pedro)</option>
+
+                        <!-- Barangays for Sta. Rosa -->
+                        <option class="sta_rosa" value="barangay_sta_rosa_1">Barangay Bagumbayan (Sta. Rosa)</option>
+                        <option class="sta_rosa" value="barangay_sta_rosa_2">Barangay Loma (Sta. Rosa)</option>
+                        <option class="sta_rosa" value="barangay_sta_rosa_3">Barangay Pulong Santa Cruz (Sta. Rosa)</option>
+                        <option class="sta_rosa" value="barangay_sta_rosa_4">Barangay San Gabriel (Sta. Rosa)</option>
+                        <option class="sta_rosa" value="barangay_sta_rosa_5">Barangay Tagapo (Sta. Rosa)</option>
+
+                    </select>
+                    <script>
+                        document.getElementById("province").addEventListener("change", function () {
+                            var province = this.value;
+                        
+                            // Reset the city and barangay selections
+                            document.getElementById("city").value = "";
+                            document.getElementById("barangay").value = "";
+                        
+                            // Disable the city and barangay dropdowns initially
+                            document.getElementById("city").disabled = !province;
+                            document.getElementById("barangay").disabled = true;
+                        
+                            // Hide all cities and barangays
+                            document.querySelectorAll("#city option").forEach(function (option) {
+                                option.style.display = "none";
+                            });
+                        
+                            document.querySelectorAll("#barangay option").forEach(function (option) {
+                                option.style.display = "none";
+                            });
+                        
+                            // Show cities corresponding to the selected province
+                            if (province) {
+                                var cities = document.querySelectorAll("#city option." + province);
+                                cities.forEach(function (city) {
+                                    city.style.display = "block";
+                                });
+                            }
+                        });
+                        
+                        document.getElementById("city").addEventListener("change", function () {
+                            var city = this.value;
+                        
+                            // Reset the barangay selection
+                            document.getElementById("barangay").value = "";
+                        
+                            // Disable the barangay dropdown initially
+                            document.getElementById("barangay").disabled = !city;
+                        
+                            // Hide all barangays
+                            document.querySelectorAll("#barangay option").forEach(function (option) {
+                                option.style.display = "none";
+                            });
+                        
+                            // Show barangays corresponding to the selected city
+                            if (city) {
+                                var barangays = document.querySelectorAll("#barangay option." + city);
+                                barangays.forEach(function (barangay) {
+                                    barangay.style.display = "block";
+                                });
+                            }
+                        });
+                        
+                        
+                    </script>
+                    
+                    <label for="membership">Membership Type</label>
+                    <select id="membership" name="membership" required>
+                        <option value="individual">Individual</option>
+                        <option value="family">Family</option>
+                        <option value="student">Student</option>
+                        <option value="senior">Senior</option>
+                    </select>
+
+                    <label for="id_upload">Upload Identification ID</label>
+                    <input type="file" id="id_upload" name="id_upload" accept=".jpg, .jpeg, .png, .pdf" required class="upload-space">
+                    
+                    <label for="interests">Areas of Interest</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="art" name="interests" value="art">
+                            <label for="art">Art</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="history" name="interests" value="history">
+                            <label for="history">History</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="science" name="interests" value="science">
+                            <label for="science">Science</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="archeology" name="interests" value="archeology">
+                            <label for="archeology">Archeology</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit"onclick="window.location.href='login.html';" value="Register">
+
+            <div class="login-link">
+                <p>Have an account? <a href="login.html">Log in here.</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
